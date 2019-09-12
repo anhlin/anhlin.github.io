@@ -1,33 +1,222 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body {
+  font-family: "Hepta Slab", serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background: rgb(0, 0, 0);
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+/* Button */
+
+button {
+  color: #ffffff;
+  background-color: Transparent;
+  border: #000000;
+  position: relative;
+  height: 60px;
+  font-size: 1.6em;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: solid;
+}
+button:hover {
+  background: #fff;
+  color: #61dbfb;
+}
+button:before,
+button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #61dbfb;
+  transition: 300ms ease all;
+}
+button:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+button:hover:before,
+button:hover:after {
+  width: 100%;
+  transition: 600ms ease all;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar */
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0 0 0.7rem 2rem;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  overflow: hidden;
+  background-color: black;
+  border-bottom: 1px solid white;
+}
+
+.navbar h5 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: #ffff;
+  padding: 0.45rem;
+  margin: 0 0.25rem;
+}
+
+.navbar a:hover {
+  color: #61dbfb;
+}
+
+.navbar .welcome span {
+  margin-right: 0.6rem;
+}
+
+.rblue {
+  color: #61dbfb;
+}
+
+.vcenter {
+  display: flex;
+  align-items: center;
+}
+
+.about-wrapper {
+  padding-top: 10%;
+  float: left;
+}
+
+.img-row {
+  width: 100%;
+  display: flex;
+  align-content: space-between;
+}
+
+.img-cnt {
+  position: relative;
+  border-radius: 50%;
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  visibility: hidden;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  opacity: 0;
+}
+.react-img,
+.node-img,
+.ds-img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.icon:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.mongo-img {
+  object-fit: contain;
+  width: 100%;
+  height: 11.25em;
+}
+
+.react-img {
+  height: 11.25em;
+  transform: rotate(270deg);
+}
+.node-img {
+  height: auto;
+}
+
+.ds-img {
+  height: 11.25em;
+}
+
+.skills-card {
+  width: 11.25em;
+  text-align: center;
+}
+
+.about {
+  text-align: left;
+  width: 50%;
+}
+
+.body1 {
+  background: rgb(255, 255, 255);
+}
+
+.white {
+  color: #ffff;
+}
+
+.center {
+  position: absolute;
+  height: 100px;
+  top: 25%;
+  left: 40%;
+  margin-left: -50px;
+  margin-top: -50px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#home {
+  text-align: center;
+  padding-top: 5%;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+  border-color: white;
+  width: 400px;
+}
+
+.profile {
+  height: 250px;
+  width: 250px;
+  margin: 4px 0 0 4px;
+  box-shadow: 0 0 0 4px #61dbfb;
+  border-radius: 50%;
+}
+
+.jumbotron {
+  border-radius: 0 !important;
+  background-color: black;
+}
+
+.jumbotron h1,
+p {
+  color: white;
 }
